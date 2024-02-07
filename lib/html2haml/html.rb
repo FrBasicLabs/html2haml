@@ -371,7 +371,7 @@ module Html2haml
           end
           if static_classname?(options)
             leftover = attr_hash['class'].to_s.split(' ').reject do |c|
-              next unless haml_css_attr?(c)
+              next if options[:force_class_to_hash] or haml_css_attr?(c)
               output << ".#{c}"
             end
             remove_attribute('class')

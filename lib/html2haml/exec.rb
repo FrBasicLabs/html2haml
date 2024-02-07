@@ -207,6 +207,10 @@ END
           @module_opts[:erb] = true
         end
 
+        opts.on('--force-class-to-hash', 'Enforce Ruby hash style for class attributes.') do
+          @module_opts[:force_class_to_hash] = true
+        end
+
         opts.on('--no-erb', "Don't parse ERB tags.") do
           @options[:no_erb] = true
         end
