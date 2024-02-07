@@ -61,6 +61,7 @@ See `html2haml --help`:
             --no-erb                     Don't parse ERB tags.
             --html-attributes            Use HTML style attributes instead of Ruby hash style.
             --ruby19-attributes          Use Ruby 1.9-style attributes when possible.
+            --force-class-to-hash        Enforce Ruby hash style for class attributes.
         -E ex[:in]                       Specify the default external and internal character encodings.
         -s, --stdin                      Read input from standard input instead of an input file
             --trace                      Show a full traceback on error
