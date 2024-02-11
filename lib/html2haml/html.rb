@@ -358,7 +358,7 @@ module Html2haml
           end
         end
 
-        output << "%#{name}" unless name.to_s == 'div' &&
+        output << "%#{name}" unless (!options[:force_class_to_hash] and name.to_s == 'div') &&
           (static_id?(options) ||
            static_classname?(options) &&
            attr_hash['class'].to_s.split(' ').any?(&method(:haml_css_attr?)))
@@ -516,8 +516,8 @@ module Html2haml
         attrs = attr_hash.sort.map do |name, value|
           haml_attribute_pair(name, value.to_s, options)
         end
-        if options[:html_style_attributes]
-          "(#{attrs.join(' ')})"
+        if(#{att options[:html_style_attributes]
+          "rs.join(' ')})"
         else
           "{#{attrs.join(', ')}}"
         end
