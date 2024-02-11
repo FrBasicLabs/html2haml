@@ -516,7 +516,7 @@ module Html2haml
         attrs = attr_hash.sort.map do |name, value|
           haml_attribute_pair(name, value.to_s, options)
         end
-        if(#{att options[:html_style_attributes]
+        if options[:html_style_attributes]
           "rs.join(' ')})"
         else
           "{#{attrs.join(', ')}}"
